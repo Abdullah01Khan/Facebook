@@ -1,3 +1,4 @@
+/*
 var firstname = ["SQA","ASE","QA","SE"]
 var lastname = ["aa","bb","cc","dd"]
 var email = ["aa@aa","bb@bb","cc@cc","dd@dd"]
@@ -7,6 +8,10 @@ firstname = firstname[ Math.floor((Math.random() * firstname.length))];
 lastname = lastname[ Math.floor((Math.random() * lastname.length))];
 email = email[ Math.floor((Math.random() * email.length))];
 password = password [ Math.floor((Math.random() * password.length))];
+
+*/
+
+const result = Math.random().toString(36).substring(2,7);
 
 class newAccount {
     navigate(){
@@ -23,10 +28,10 @@ class newAccount {
         cy.get('[data-testid="open-registration-form-button"]').click()
 
 //Randomly select the values of the form
-        cy.get('[aria-label="First name"]').type(firstname).should('have.value', firstname)
-        cy.get('[aria-label="Surname"]').type(lastname)
-        cy.get('[aria-label="Mobile number or email address"]').click().type(email)
-        cy.get('#password_step_input').click().type(password)
+        cy.get('[aria-label="First name"]').type(result).should('have.value', result)
+        cy.get('[aria-label="Surname"]').type(result)
+        cy.get('[aria-label="Mobile number or email address"]').click().type(result)
+        cy.get('#password_step_input').click().type(result)
     }
 
 //Add Date of birth and gender
