@@ -24,7 +24,7 @@ class newAccount {
 //Covert urdu to english
         cy.get('.fcb > a').click()
 
-//click on create account button
+//click on create account
         cy.get('[data-testid="open-registration-form-button"]').click()
 
 //Randomly select the values of the form
