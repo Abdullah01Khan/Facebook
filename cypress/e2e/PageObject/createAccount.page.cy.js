@@ -40,7 +40,7 @@ class newAccount {
         cy.get('#year').select('2000').should('have.value','2000')
         cy.get(':nth-child(2) > ._58mt').click()
 
-//Click on the Signup button flow
+//Click on the Signup button
         cy.get('._1lch').contains('Sign Up').click()
     }
 
